@@ -4,6 +4,7 @@ class UserController {
 
     static async login (req,res) {
         try {
+          // findone is a mongoose function
             let user = await User.findOne({email: req.body.email }).exec();
         // if(!user) {
         //     return res.status(400).send(
